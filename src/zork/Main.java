@@ -327,7 +327,8 @@ public class Main {
 
                 case "no":
                     System.out.println("Old spider: You are a very wierd Wanderer");
-                    System.out.println("Here is some time poetry from the old book next to me ");
+                    System.out.println("*you here him mumble something but you cant really hear it*");
+                    System.out.println("If this is your final choice enjoy some extremely pointless poetry");
                     System.out.println("""
                             In life's tapestry, woven with memory and time, I reflect on days of old. The world has danced through changing eras, much like a river on ancient stones.\s
                              Years teach patience, revealing our true selves. Wisdom embraces life's joys and sorrows. Through youth and reflection, I've learned value in relationships and laughter.
@@ -344,6 +345,7 @@ public class Main {
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
+                    System.out.println("Now get out of my sight");
                     upstairs(true);
 
                 default:
@@ -377,7 +379,8 @@ public class Main {
                 upstairs(true);
             case "no":
                 System.out.println("So then I guess not ");
-                upstairs(false);
+                System.out.println("Then get out of my face");
+                upstairs(true);
             default:
                 System.out.println("Try yes or no");
                 bedroom2();
@@ -564,7 +567,7 @@ public class Main {
 
     public static void woodsright1(boolean showintro) {
         if (showintro) {
-            System.out.println("You live to make another choice");
+            System.out.println("wow pass the first choice, good");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
@@ -586,7 +589,7 @@ public class Main {
 
     public static void woodsleft1(boolean showintro) {
         if (showintro) {
-            System.out.println("You live to make another choice");
+            System.out.println("you can make another choice, choose wisely");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
@@ -610,7 +613,7 @@ public class Main {
 
     public static void woodsright2(boolean showintro) {
         if (showintro) {
-            System.out.println("You live to make another choice");
+            System.out.println("good job with choosing a decent way, dont loose now ");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
@@ -659,7 +662,7 @@ public class Main {
 
     public static void woodsright4(boolean showintro) {
         if (showintro) {
-            System.out.println("You live to make another choice");
+            System.out.println("You have a good choice as it seems, dont screw it up now");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
