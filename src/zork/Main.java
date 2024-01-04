@@ -516,6 +516,7 @@ public class Main {
 
             default:
                 System.out.println(" Try the words yes or no :) ");
+                secret_room();
         }
 
 
