@@ -24,7 +24,7 @@ public class Main {
             System.out.println("You made it to the living room");
             System.out.println("What do you want to do ?");
         }
-        System.out.println("I would try to look around :)");
+        System.out.println("I would try to look around in the room");
         t = console.nextLine();
         if (t.equalsIgnoreCase("look") || t.equalsIgnoreCase("look around")) {
             System.out.println("You find a small old box");
@@ -34,14 +34,14 @@ public class Main {
                 case "yes":
                     System.out.println("You found an old book in that box");
                     System.out.println("It was the famous book Ulysses by James Joyce");
-                    System.out.println("You put the book back into the box not thinking about it anymore");
+                    System.out.println("You put the book back into the box not thinking about it anymore and then leave the room");
                     try {
                         Thread.sleep(2000);
                     } catch (InterruptedException e) {
 
                         throw new RuntimeException(e);
                     }
-                    kitchen(false);
+                    downstairs(false);
                 case "no":
                     leavethehouse(true);
 
@@ -55,20 +55,20 @@ public class Main {
         }
     }
 
-    private static void living_room2(){
+   /* private static void living_room2() {
         String h;
         String j;
         System.out.println("You made it into the living room again");
         System.out.println("What do you want to do ?");
         h = console.nextLine();
-        if(h.equalsIgnoreCase("look")|| h.equalsIgnoreCase("look around")) {
+        if (h.equalsIgnoreCase("look") || h.equalsIgnoreCase("look around")) {
             System.out.println("There is nothing in the room except for the empty box you found before.");
 
-        }else {
+        } else {
             System.out.println("Try again with the right word");
             living_room2();
         }
-    }
+    } */
 
     private static void leavethehouse(boolean showintro) {
         String s;
@@ -82,7 +82,7 @@ public class Main {
                 System.out.println("Then you may continue");
                 downstairs(false);
             case ("no"):
-                System.out.println("Then it shall be. You lived another 3 days before you cancel the membership to life");
+                System.out.println("Then it shall be. You lived another 3 days before you couldn't find anything left to eat");
                 console.close();
             default:
                 System.out.println("Try yes or no");
@@ -92,7 +92,7 @@ public class Main {
 
     private static void kitchen(boolean showintro) {
         if (showintro) {
-            System.out.println("You woke up on a table in a old, rancid kitchen. You dont recall ever being there.");
+            System.out.println("You woke up on a table in a old, rancid kitchen. You dont recall ever going there.");
             System.out.println("The old house that you are in has a very wierd smell and you hear a lot of commotion outside but you choose to ignore it.");
             System.out.println("You decide to investigate the house. Where do you want to go ?");
         }
@@ -130,6 +130,7 @@ public class Main {
         t = console.nextLine();
         if (t.equalsIgnoreCase("look") || t.equalsIgnoreCase("look around")) {
             System.out.println("There is a clearly locked door \n" +
+                    "That requires a code " +
                     "Are you sure that you have the right number-code ?");
             s = console.nextLine();
             switch (s) {
@@ -192,7 +193,7 @@ public class Main {
                 System.out.println(7);
                 i = console.nextInt();
                 if (i == randomNum3) {
-                    System.out.println("Yes that is correct. You can play another round");
+                    System.out.println("You can play another round since you made the right choice ");
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException s) {
@@ -203,7 +204,7 @@ public class Main {
                     System.out.println(randomNum4);
                     c = console.nextInt();
                     if (c == randomNum4) {
-                        System.out.println("Yes good Job. only one more to go :]");
+                        System.out.println("Yes good Job. Only one more to go :]");
                         System.out.println(randomNum5);
                         System.out.println(7);
                         System.out.println(4);
@@ -238,17 +239,17 @@ public class Main {
 
     private static void deadintest() {
         System.out.println("This is the wrong number. I have warned you about the consequences ");
-        System.out.println("Tiny came to get you....");
+        System.out.println("The Volts came to get you....");
         System.out.println("YOU HAVE DIED");
         console.close();
     }
 
     private static void bathroom(boolean showintro) {
-                if (showintro) {
+        if (showintro) {
             System.out.println("You went into the bathroom ");
             System.out.println("What do you want to do ?");
         }
-        System.out.println("I would try to look around :)");
+        System.out.println("I would try to look around the room");
         String t;
         String s;
         t = console.nextLine();
@@ -260,7 +261,7 @@ public class Main {
                 case "yes":
                     secret_room();
                 case "no":
-                    System.out.println("Then go do something else :(");
+                    System.out.println("Then go do something else ");
                     upstairs(true);
                 default:
                     System.out.println("Try yes or no");
@@ -293,8 +294,7 @@ public class Main {
                     b = console.nextLine();
                     switch (b) {
                         case "yes":
-                            System.out.println("Then here you go enjoy the quick access to the code");
-                            System.out.println("Here is the code for you use it wise ");
+                            System.out.println("Then here you go. A code I found. I dont know what it is for");
                             System.out.print(randomNum1);
                             System.out.print(randomNum2);
                             System.out.print(randomNum3);
@@ -364,13 +364,11 @@ public class Main {
         switch (s) {
             case "yes":
                 System.out.println("Very well then Wanderer.");
-                System.out.println("Then here you go enjoy the quick access to the code");
-                System.out.println("Here is the code for you use it wise ");
+                System.out.println("Then here you go.");
+                System.out.println("The first 3 Numbers. You dont get more. You have to find the other numbers");
                 System.out.print(randomNum1);
                 System.out.print(randomNum2);
-                System.out.print(randomNum3);
-                System.out.print(randomNum4);
-                System.out.println(randomNum5);
+                System.out.println(randomNum3);
                 try {
                     Thread.sleep(3400);
                 } catch (InterruptedException e) {
@@ -379,7 +377,7 @@ public class Main {
                 upstairs(true);
             case "no":
                 System.out.println("So then I guess not ");
-                System.out.println("Then get out of my face");
+                System.out.println("Then go find a different way to get it");
                 upstairs(true);
             default:
                 System.out.println("Try yes or no");
@@ -457,6 +455,16 @@ public class Main {
                                 - Entity 400 = The Mimic\s
                                 This is a very hostile Entity and mimics familiar Stuff. So he will mimic houses from your Childhood\s
                                 or even your families members and friends""");
+                        try {
+                            Thread.sleep(2500);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        System.out.println("""
+                                - Entity 503 = The Volts\s
+                                This is a hostile Entity that can manipulate anything that is metal.\s
+                                To survive don't engage with it at all. If you are spotted either hide behind something non-metallic\s
+                                or make a run for it. Do not throw water at it this will only make it stronger""");
                         try {
                             Thread.sleep(2500);
                         } catch (InterruptedException e) {
@@ -544,6 +552,7 @@ public class Main {
             } catch (InterruptedException h) {
                 throw new RuntimeException(h);
             }
+
             System.out.println("You have a Choice to make. Choose wisely....");
             try {
                 Thread.sleep(200);
@@ -554,10 +563,10 @@ public class Main {
         }
         g = console.nextLine();
         if (g.equalsIgnoreCase("left")) {
-            System.out.println("You have chose to go left. You will have to see if you chose the right direction");
+            System.out.println("You have chose to go left. You will have to see if you chose the good direction");
             entity41();
         } else if (g.equalsIgnoreCase("right")) {
-            System.out.println("You have chose to go right. You will have to see if you chose the right direction");
+            System.out.println("You have chose to go right. You will have to see if you chose the good direction");
             entity194();
         } else {
             System.out.println("Try the words left or right");
@@ -565,9 +574,9 @@ public class Main {
         }
     }
 
-    public static void woodsright1(boolean showintro) {
+    public static void woodsright2(boolean showintro) {
         if (showintro) {
-            System.out.println("wow pass the first choice, good");
+            System.out.println("wow you passed the first choice, good");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
@@ -583,11 +592,11 @@ public class Main {
             entity326();
         } else {
             System.out.println("Try the words left or right");
-            woodsright1(false);
+            woodsright2(false);
         }
     }
 
-    public static void woodsleft1(boolean showintro) {
+    public static void woodsleft2(boolean showintro) {
         if (showintro) {
             System.out.println("you can make another choice, choose wisely");
             try {
@@ -596,7 +605,7 @@ public class Main {
                 throw new RuntimeException(ex);
             }
         }
-        System.out.println("On which side do you want to go now ?");
+        System.out.println("What side do you chose now?");
         String b;
         b = console.nextLine();
         if (b.equalsIgnoreCase("right")) {
@@ -604,14 +613,14 @@ public class Main {
         } else if (b.equalsIgnoreCase("left")) {
             System.out.println("You have encounter nothing");
             System.out.println("You made a really good choice");
-            woodsright2(true);
+            woodsright3(true);
         } else {
             System.out.println("Try the words left or right");
-            woodsleft1(false);
+            woodsleft2(false);
         }
     }
 
-    public static void woodsright2(boolean showintro) {
+    public static void woodsright3(boolean showintro) {
         if (showintro) {
             System.out.println("good job with choosing a decent way, dont loose now ");
             try {
@@ -620,7 +629,7 @@ public class Main {
                 throw new RuntimeException(ex);
             }
         }
-        System.out.println("On which side do you want to go now ?");
+        System.out.println("Where do you want to go now?");
         String b;
         b = console.nextLine();
         if (b.equalsIgnoreCase("right")) {
@@ -642,7 +651,7 @@ public class Main {
                 throw new RuntimeException(ex);
             }
         }
-        System.out.println("On which side do you want to go now ?");
+        System.out.println("On what side now?");
         String b;
         b = console.nextLine();
         if (b.equalsIgnoreCase("right")) {
@@ -651,7 +660,7 @@ public class Main {
             console.close();
         } else if (b.equalsIgnoreCase("left")) {
             System.out.println("You have encountered nothing");
-            System.out.println("You have escaped the forest");
+            System.out.println("Nothing is in your way of winning, Good Job :p");
             System.out.println("YOU WON");
             console.close();
         } else {
@@ -669,7 +678,7 @@ public class Main {
                 throw new RuntimeException(ex);
             }
         }
-        System.out.println("On which side do you want to go now ?");
+        System.out.println("What side do you want to go now?");
         String b;
         b = console.nextLine();
         if (b.equalsIgnoreCase("right")) {
@@ -685,20 +694,20 @@ public class Main {
     public static void entity3() {
         String b;
         System.out.println("You have encountered Entity 3 | The Smiler");
-        System.out.println("How can you escape the Smiler?");
+        System.out.println("Do you what to do now?");
         System.out.println("""
-                1: The Smiler Exterminator\s
-                2: Throwing a light source after it\s
+                1: Charge The Smiler Exterminator at it\s
+                2: Throwing a light source at it\s
                 3: Just making a run for it""");
         b = console.nextLine();
         switch (b) {
             case "1":
                 System.out.println("That is a good idea :D");
-                woodsright2(true);
+                woodsright3(true);
                 break;
             case "2":
                 System.out.println("That is a really good idea :D");
-                woodsright2(true);
+                woodsright3(true);
                 break;
             case "3":
                 System.out.println("That is a really bad idea :o");
@@ -724,14 +733,14 @@ public class Main {
         switch (b) {
             case "1":
                 System.out.println("That is correct. They gave you The Smiler Exterminator");
-                woodsright1(true);
+                woodsright2(true);
                 break;
             case "2", "3":
                 System.out.println("That is incorrect. They wont attack but you get nothing from them");
-                woodsright1(true);
+                woodsright2(true);
                 break;
             default:
-                System.out.println("Try the numbers ");
+                System.out.println("Try the numbers");
                 entity194();
 
         }
@@ -740,7 +749,7 @@ public class Main {
     public static void entity222() {
         String b;
         System.out.println("You have encountered Entity 222 | The Soulsucker");
-        System.out.println("How many Phases does the Soulsucker have ?");
+        System.out.println("Do you know many Phases the Soulsucker has ?");
         System.out.println("""
                 1: It has four phases\s
                 2: It has five phases\s
@@ -749,6 +758,7 @@ public class Main {
         switch (b) {
             case "1", "3":
                 System.out.println("That is wrong.");
+                System.out.println("It came to get you");
                 System.out.println("YOU DIED");
                 console.close();
                 break;
@@ -777,7 +787,7 @@ public class Main {
         switch (b) {
             case "1":
                 System.out.println("That is a okay idea. They dont follow you and dont want to attack you");
-                woodsright2(true);
+                woodsright3(true);
                 break;
             case "2":
                 System.out.println("They enjoy talking too you and they asked if you will take them with. You do you want to ?");
@@ -785,11 +795,11 @@ public class Main {
                 switch (t) {
                     case "yes":
                         System.out.println("You will take them with you and they are very happy about that");
-                        woodsright2(true);
+                        woodsright3(true);
                         break;
                     case "no":
                         System.out.println("They are not really happy about that but they respect your decision :/");
-                        woodsright2(true);
+                        woodsright3(true);
                         break;
                     default:
                         System.out.println("Try yes or no");
@@ -829,21 +839,22 @@ public class Main {
     public static void entity503() {
         String k;
         System.out.println("You have encountered Entity 503 | The Volts");
-        System.out.println("Do you know how many Entities haunt these Woods?");
+        System.out.println("How do you want to react");
         System.out.println("""
-                1: These Woods are haunted by over 1000 Entities\s
-                2: These Woods are haunted by over 200 Entities\s
-                3: These Woods are not haunted at all""");
+                1: Hide behind a Tree\s
+                2: Throw Water at it\s
+                3: Quietly walk away""");
         k = console.nextLine();
         switch (k) {
-            case "1":
-                System.out.println("That is correct. Hope you didnt encounter too many of them :P");
+            case "1", "2":
+                System.out.println("That's a very good choice");
+                System.out.println("Now nothings i your way of escape");
                 System.out.println("You have escaped the forest");
                 System.out.println("YOU WON");
                 console.close();
                 break;
-            case "2", "3":
-                System.out.println("That is wrong. These woods are very haunted and you just got too from the Volt :|");
+            case "3":
+                System.out.println("That is wrong. You just made it stronger and it killed you");
                 System.out.println("YOU DIED");
                 console.close();
                 break;
@@ -856,7 +867,7 @@ public class Main {
     public static void entity720() {
         String b;
         System.out.println("You have encountered Entity 720 | Tiny");
-        System.out.println("What do you want to do in the presence of Tiny ");
+        System.out.println("What do you want to do in the presence of Tiny ?");
         System.out.println("""
                 1: Make a run for it\s
                 2: Trying to harm him\s
@@ -890,16 +901,17 @@ public class Main {
         b = console.nextLine();
         switch (b) {
             case "1":
-                System.out.println("She is very happy that you where talking to her. She gives you a ton of help and trys keeps the next Entity away from you :P");
-                woodsleft1(true);
+                System.out.println("She is very happy that you where talking to her. She gives you a ton of help and trys to keep the next Entity away from you :P");
+                woodsleft2(true);
                 break;
             case "2":
                 System.out.println("She is very angry at you and will get another Entity that will attack you >:(");
+                System.out.println("She called Tiny and you died");
                 console.close();
                 break;
             case "3":
-                System.out.println("SHe is very disappointed that you completely ignored her and wont talk to her :C ");
-                woodsleft1(true);
+                System.out.println("She is very disappointed that you completely ignored her and wont talk to her :C ");
+                woodsleft2(true);
                 break;
             default:
                 System.out.println("Try the numbers");
@@ -911,7 +923,7 @@ public class Main {
     public static void entity1() {
         String b;
         System.out.println("You have you encountered Entity 1 | Humans ");
-        System.out.println("What do you want to do ?");
+        System.out.println("What do you want to do?");
         System.out.println("""
                 1: Take them with you\s
                 2: Leave them there \s
